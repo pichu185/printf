@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 		 {"s", print_string},
 	    	 {"i", print_int},
 		 {"d", print_int},
-		 {"u", print_unsigned},
 		 {"%", print_porcentaje},
 		 {NULL, NULL}
 	};
@@ -33,7 +32,7 @@ if (format != NULL)
  * @lista: arguments
  * Return: number of characters printed
  */
-int _functions(const char *format, format_t opciones[], va_list lista)
+int _functions(const char *format, form_t opciones[], va_list lista)
 {
 	int contador = 0, i, i2;
 
