@@ -19,7 +19,7 @@ typedef struct format
 } form_t;
 
 int _printf(const char *format, ...);
-int _functions(const char *format, format_t opciones[], va_list lista);
+int _functions(const char *format, form_t opciones[], va_list lista);
 int print_string(va_list lista);
 int print_char(va_list lista);
 int _putchar(char c);
