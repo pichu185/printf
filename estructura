@@ -1,0 +1,13 @@
+#include "holberton.h"
+
+int _printf(const char *format, ...)
+{
+	format_t type[] = {
+	       {"c", print_char},
+	       {"s", print_char_2},
+	       {"d", print_int}
+ 	       {"i", print_int},
+	       {"b", print_to_binar},
+	       {"%", print_percent},
+	       {NULL, NULL},
+};
