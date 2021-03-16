@@ -8,9 +8,9 @@
 int _printf(const char *format, ...);
 
 /**
- * struct formato - This is a typedef struct.
- * @opt: Pointer type char.
- * @call_fun: Pointer to call the function.
+ * struct format - This is a typedef struct.
+ * @elegida: Pointer type char.
+ * @llamar: Pointer to call the function.
  */
 typedef struct format
 {
