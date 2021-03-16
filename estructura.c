@@ -48,13 +48,13 @@ int _functions(const char *format, form_t opciones[], va_list lista)
 			{
 				if (format[i + 1] == opciones[i2].elegida[0])
 				{
-			       contador = contador + opciones[i2].llamar(lista);
+contador = contador + opciones[i2].llamar(lista);
 			       break;
 				}
 			}
-   			if (opciones[i2].elegida == NULL && format[i + 1] != ' ')
+			if (opciones[i2].elegida == NULL && format[i + 1] != ' ')
 			{
-				if (format[i + 1] != '\0')
+				  if (format[i + 1] != '\0')
 			{
 			      _putchar(format[i]);
 			      _putchar(format[i + 1]);
