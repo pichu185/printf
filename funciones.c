@@ -44,11 +44,8 @@ int print_string(va_list lista)
  * @lista: arguments
  * Return: numbers of characters printed
  */
-int print_porcentaje(va_list lista)
+int print_porcentaje(__attribute__((unused)) va_list lista)
 {
-	if (lista != NULL)
-	{
-	}
 	_putchar('%');
 	return (1);
 }
@@ -66,7 +63,8 @@ int print_int(va_list lista)
 	i = va_arg(lista, int);
 	if (i < 0)
 	{
-		largo = largo + _putchar('-');
+		largo++;
+		_putchar('-');
 		num = i * -1;
 	}
 	else
