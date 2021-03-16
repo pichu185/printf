@@ -34,7 +34,7 @@ return (contador);
  */
 int _functions(const char *format, form_t opciones[], va_list lista)
 {
-	int contador = 0, i, i2;
+	int contador = 0, i, j;
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -44,21 +44,21 @@ int _functions(const char *format, form_t opciones[], va_list lista)
 			{
 				return (-1);
 			}
-			for (i2 = 0; opciones[i2].elegida != NULL; i2++)
+			for (j = 0; opciones[j].elegida != NULL; j++)
 			{
-				if (format[i + 1] == opciones[i2].elegida[0])
+				if (format[i + 1] == opciones[j].elegida[0])
 				{
-contador = contador + opciones[i2].llamar(lista);
-			       break;
+					contador = contador + opciones[j].llamar(lista);
+					break;
 				}
 			}
-			if (opciones[i2].elegida == NULL && format[i + 1] != ' ')
+			if (opciones[j].elegida == NULL && format[i + 1] != ' ')
 			{
-				  if (format[i + 1] != '\0')
+				if (format[i + 1] != '\0')
 			{
-			      _putchar(format[i]);
-			      _putchar(format[i + 1]);
-			      contador = contador + 2;
+				_putchar(format[i]);
+				_putchar(format[i + 1]);
+				contador = contador + 2;
 			}
 				else
 					return (-1);
